@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1>Stellar Oscillations</h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="index.html#osc">Research</a>
+									<ul>
+										<li><a href="neid-earth-twin-survey.html">The NEID Earth Twin Survey</a></li>
+										<li><a href="giant-planet-migration.html">Giant Exoplanet Migration</a></li>
+										<li><a href="stellar-oscillations.html">Stellar Oscillations</a></li>
+										<li><a href="information-theory.html">Information Theory</a></li>
+										<li><a href="poster-gallery.html">Poster Gallery</a></li>
+										<li><a href="article-summaries.html">Article Summaries</a></li>
+									</ul>
+								</li>
+								<li><a href="CV_ArvindFGupta_NOIRLab.pdf">CV</a></li>
+								<li><a href="about-me.html">About</a></li>
+								<li><a href="contact-me.html">Contact</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+
+			<!-- Main -->
+				<div class="wrapper style2">
+
+					<article id="main" class="container special">
+						<h2r>
+    						<br/>
+							<p>
+								Beating down the noise
+							</p>
+						</h2r>
+						<p>
+							Pressure-driven expansion and contraction of the outer convective layers of stellar envelopes, known as &quotp-mode&quot oscillations,
+							produce apparent radial velocity variations.
+							Multiple modes are active simultaneously, and while the exact interference pattern can not easily be predicted given the stochastic
+							excitation and damping of oscillations, the net RMS is typically on the order of ~1 m s<sup>-1</sup> for Sun-like stars.
+							Left unmitigated, these variations would be a significant obstacle to the detection of Earth-like exoplanets, which induce signals with amplitudes of just 10 cm s<sup>-1</sup>.
+							But p-mode oscillations are rapid variations, operating on timescales of just 5-10 minutes. So if the mode frequencies are known, it is possible to average
+							out, or &quotfilter&quot, the bulk of the signal with carefully timed exposures.  A clever oscillation mitigation model was laid out by <a href="https://ui.adsabs.harvard.edu/abs/2019AJ....157..163C/abstract" style="color:#349beb">Chaplin et al. (2019)</a>,
+							and I and others have adopted it in designing observing strategies for high precision radial velocity measurements to keep the residual p-mode signal below a tolerable threshold.
+							A versatile python library for predicting residual oscillation amplitudes and filtering timescales can be found on my github here: <a href="https://github.com/afgupta/rv_oscillation_filtering">https://github.com/afgupta/rv_oscillation_filtering </a><a href="https://github.com/afgupta" class="icon brands fa-github"><span class="label"></span></a>
+						</p>
+                        <div style="text-align: center;">
+                		<img src="images/osc_multipanel.png" alt="" width="75%" />
+                		</div>
+                        <h2r>
+							<p>
+								Scaling from Solar
+							</p>
+						</h2r>
+        				<p>
+      						A key requirement for properly averaging out p-mode signals is knowledge of fundamental stellar properties, most notably the density, surface gravity, and effective temperature, which dictate the
+      						structure of the stellar interior and envelope and thus the p-mode frequencies and amplitudes. It is common practice to start with the known Solar p-mode frequencies and amplitudes and use
+      						measures stellar parameters to scale these for other stars. While preparing for the <a href="neid-earth-twin-survey.html" style="color:">NEID Earth Twin Survey</a>, my team was interested in verifying that these scaling relations were sufficiently accurate and that
+      						oscillations could indeed be averaged out in the expected manner. 
+                			To test this, we used <a style="color:#349beb" href="https://neid.psu.edu">NEID</a> to obtain a 6.5-hour, high-cadence sequence of RVs for a bright subgiant star.
+                			Though we confirmed that the oscillation frequencies aligned with our expectations from scaling relations,
+                			the amplitudes were much weaker, pointing to a pronounced dependence on second order effects. A more detailed summary of these results can be found in our paper
+                			(<a href="https://ui.adsabs.harvard.edu/abs/2022AJ....164..254G/abstract" style="color:#349beb">Gupta et al. 2022</a>)
+                		</p>
+                        <div style="text-align: center;">
+                		<img src="images/HD35833_fit.png" alt="" width="75%" />
+                		</div>
+						<h2r>
+							<p>
+								Sampling vs. Averaging?
+							</p>
+						</h2r>
+						<p>
+    						Because oscillation timescales are so short, with the strongest p-mode frequencies comparable to the duration of a single exposure for typical radial velocity targets,
+    						our first instinct has always been to average them out. This differs from the standard approach to mitigating correlated noise that operates on long timescales (e.g., weeks to months),
+    						for which astronomers typically attempt to sample the signals at high cadence and then model them out. But what if we could apply this same approach to oscillations?
+						</p>  
+						<p>
+    						In my recent study of radial velocity survey strategies (<a href="https://ui.adsabs.harvard.edu/abs/2023arXiv230314571G/abstract" style="color:#349beb">Gupta &amp Bedell 2024</a>; see also <a href="information-theory.html" style="color:#349beb">Information Theory</a>), the efficacy of sampling p-mode oscillations was among the strategies I tested. We found that, in the case that oscillations are the only source of variability
+    						and the stellar parameters are well constrained, finely sampling the signal can actually produce better results. This gets complicated when we introduce, e.g., photon noise and other stellar variability, But
+    						new spectrographs such as the <a href="https://www.keckobservatory.org/kpf/" style="color:349beb">Keck Planet Finder</a> with fast readout modes could facilitate this as a viable observing strategy.
+						</p>
+                        <div style="text-align: center;">
+                        <img src="images/fisher_osc_with_strategies.png" width="75%" alt="" />
+                        </div>
+					</article>
+
+				</div>
+
+			<!-- Features -->
+				<div class="wrapper style1">
+
+					<section id="features" class="container special">
+							<h2r>Related publications</h2r>
+						<div class="row">
+							<article class="col-4 col-12-mobile special">
+                                    <a href="https://doi.org/10.3847/1538-3881/ac96f3" class="image pub"><img src="images/HD35833_amp.jpeg" alt=""/></a>
+                                <header>
+									<h3 align="left"><a href="https://doi.org/10.3847/1538-3881/ac96f3">Detection of p-mode Oscillations in HD 35833 with NEID and TESS</a></h3>
+								</header>
+								<p>
+									Gupta, A.F., Luhn, J.K., Wright, J.T.,  et al. (2022)
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="https://doi.org/10.48550/arXiv.2303.14571" class="image pub"><img src="images/Fisher_osc.png" alt="" /></a>
+								<header>
+									<h3 align="left"><a href="https://doi.org/10.48550/arXiv.2303.14571">Fishing for Planets: A Comparative Analysis of EPRV Survey Performance in the Presence of Correlated Noise</a></h3>
+								</header>
+								<p>
+									Gupta, A.F. & Bedell, M. (2024)
+								</p>
+							</article>
+						</div>
+					</section>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+                    <div class="copyright">
+						<ul class="menu">
+							<li>&copy; Arvind F. Gupta. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>				
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
